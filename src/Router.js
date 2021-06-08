@@ -8,6 +8,7 @@ import {
 import styled from 'styled-components'
 import Navigation from './Components/Navigation'
 import Slider from './Components/Slider'
+import Portfolio from './Components/Portfolio'
 
 const Container = styled.div`
     position: relative;
@@ -40,17 +41,13 @@ export default function App () {
 }
 
 function Home () {
-  return <Slider/>;
+  return <Slider />
 }
 
 function About () {
-  return <h2>About</h2>;
+  return <h2>About</h2>
 }
 
 function Contacts () {
-  return <h2>Contacts</h2>;
+  return <h2>Contacts</h2>
 }
-
-function Portfolio () {
-    return <h2>Portfolio</h2>;
-  }

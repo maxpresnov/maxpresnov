@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import styled from 'styled-components'
 import Slider from 'react-slick'
-import { Link } from 'react-router-dom'
 import data from '../../Images/SliderData'
 import Colors from '../../Colors'
 
@@ -79,7 +78,7 @@ function SliderComponent () {
             <Title>{e.title}</Title>
             <Description>{e.description}</Description>
           </DescriptionContainer>
-          <Overlay id='overlay' />
+          {/* <Overlay id='overlay' /> */}
         </Slide>)}
       </Slider>
     )
