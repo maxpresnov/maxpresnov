@@ -1,62 +1,56 @@
-import React from "react";
+import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Slider from "./Components/Slider"
-export default function App() {
+  Route
+} from 'react-router-dom'
+
+import styled from 'styled-components'
+import Navigation from './Components/Navigation'
+import Slider from './Components/Slider'
+
+const Container = styled.div`
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+`
+
+export default function App () {
   return (
     <Router>
-      <div>
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/portfolio">Contacts</Link>
-            </li>
-          </ul>
-        </nav> */}
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+      <Container>
+        <Navigation />
         <Switch>
-          <Route path="/about">
+          <Route path='/about'>
             <About />
           </Route>
-          <Route path="/contacts">
+          <Route path='/contacts'>
             <Contacts />
           </Route>
-          <Route path="/portfolio">
+          <Route path='/portfolio'>
             <Portfolio />
           </Route>
-          <Route path="/">
+          <Route path='/'>
             <Home />
           </Route>
         </Switch>
-      </div>
+      </Container>
     </Router>
   );
 }
 
-function Home() {
+function Home () {
   return <Slider/>;
 }
 
-function About() {
+function About () {
   return <h2>About</h2>;
 }
 
-function Contacts() {
+function Contacts () {
   return <h2>Contacts</h2>;
 }
 
-function Portfolio() {
+function Portfolio () {
     return <h2>Portfolio</h2>;
   }
