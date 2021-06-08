@@ -47,11 +47,14 @@ const MenuItem = styled(Link)`
 
 export default function Navigation () {
     return (
-        <MenuContainer>
-            <Logo to="/">Max<br /> Presnov</Logo>
-            <MenuItem to='/portfolio'>ПОРТФОЛИО</MenuItem>
-            <MenuItem>ОБО МНЕ</MenuItem>
-            <MenuItem>КОНТАКТЫ</MenuItem>
-        </MenuContainer>
+        <div>
+            
+            <MenuContainer>
+                <Logo to="/">Max<br /> Presnov</Logo>
+                <MenuItem to='/portfolio'>ПОРТФОЛИО</MenuItem>
+                <MenuItem>ОБО МНЕ</MenuItem>
+                <MenuItem>КОНТАКТЫ</MenuItem>
+            </MenuContainer>
+        </div>
     )
 }

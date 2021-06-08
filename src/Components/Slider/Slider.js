@@ -73,7 +73,7 @@ function SliderComponent () {
     }
     return (
       <Slider {...settings} style={{ width: '100vw'}}>
-        {data.map((e, key) => <Slide key={`ts:${key}`} image={e.image.default}>
+        {data.filter(f => f.isMain).map((e, key) => <Slide key={`ts:${key}`} image={e.image.default}>
           <DescriptionContainer>
             <Title>{e.title}</Title>
             <Description>{e.description}</Description>
